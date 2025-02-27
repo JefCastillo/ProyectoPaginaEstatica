@@ -116,7 +116,7 @@ img {
 }
 
 .bg-white {
-  background-color: #ffffff; /* Color de fondo blanco */
+  background-color: hsl(0, 0%, 0%); /* Color de fondo blanco */
 }
 
 .hover\:bg-blue-600:hover {
