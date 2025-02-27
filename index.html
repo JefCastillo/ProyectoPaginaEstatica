@@ -1,21 +1,605 @@
-html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="nav">
-        <a href="index.html">Inicio</a>
-        <a href="pagina1.html">Página 1</a>
-        <a href="pagina2.html">Página 2</a>
-    </div>
-    <div class="container">
-        <div class="box">
-            <h1>Bienvenido a la Página Principal</h1>
-            <p>Esta es una página web con tres secciones pequeñas interconectadas.</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIDA DE FORANEO</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <div class="flex h-screen bg-gray-100">
+      <!-- Left Sidebar -->
+      <div class="w-64 bg-white shadow-md overflow-y-auto h-full left-sidebar">
+        <div class="p-4">
+          <h1 class="text-2xl font-bold titulo-foraneo">
+            VIDA DE<br />
+            FORANEO
+          </h1>
         </div>
+
+        <!-- Perfil centrado -->
+        <div class="profile-container flex items-center space-x-4">
+          <img
+            src="/img/img_perfil.png"
+            alt="Profile"
+            class="rounded-full"
+            width="40"
+            height="40"
+          />
+          <span>@FuriaCardenas</span>
+        </div>
+
+        <div class="p-4">
+          <div class="my-4 border-t border-gray-200"></div>
+          <nav class="space-y-2">
+            <a
+              href="index.html"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+            >
+              <i class="fas fa-home icon"></i>
+              <span class="ml-2">Inicio</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+            >
+              <i class="fas fa-pencil-alt icon"></i>
+              <span class="ml-2">Publicar</span>
+            </a>
+            <a
+              href="mensajes.html"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+            >
+              <i class="fas fa-comments icon"></i>
+              <span class="ml-2">Mensajes</span>
+            </a>
+            <a
+              href="Amigos.html"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+            >
+              <i class="fas fa-user-friends icon"></i>
+              <span class="ml-2">Amigos</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+            >
+              <i class="fas fa-cog icon"></i>
+              <span class="ml-2">Configuración</span>
+            </a>
+            <a
+              href="faq.html"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+            >
+              <i class="fas fa-question-circle icon"></i>
+              <span class="ml-2">Preguntas frecuentes</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded mt-4"
+            >
+              <i class="fas fa-sign-out-alt icon"></i>
+              <span class="ml-2">Cerrar sesión</span>
+            </a>
+            <!-- Dentro del Sidebar Izquierdo -->
+            <!-- Dentro del Sidebar Izquierdo -->
+            <div class="p-4">
+              <nav class="space-y-2">
+                <!-- Contenedor para mostrar los valores ingresados, inicialmente oculto -->
+                <div id="additional-menu" class="hidden">
+                  <!-- Aquí estará vacío inicialmente y se llenará con las categorías y subcategorías guardadas -->
+                </div>
+
+                <!-- Botón "Agregar más" -->
+                <button id="add-more-btn" class="add-more-btn">
+                  <i class="fas fa-plus"></i>
+                  <!-- Icono de "+" -->
+                  <span class="ml-2">Agregar atajo</span>
+                </button>
+
+                <!-- Modal para selección de categorías y subcategorías -->
+                <div id="modal-form" class="modal hidden">
+                  <div class="modal-content">
+                    <!-- Título de categorías -->
+                    <h3 id="category-title">Selecciona una categoría</h3>
+
+                    <!-- Opciones de categorías -->
+                    <div class="category-options">
+                      <label
+                        ><input
+                          type="radio"
+                          name="category"
+                          value="Transporte"
+                          required
+                        />
+                        Transporte</label
+                      >
+                      <label
+                        ><input type="radio" name="category" value="Comida" />
+                        Comida</label
+                      >
+                      <label
+                        ><input type="radio" name="category" value="Deporte" />
+                        Deporte</label
+                      >
+                      <label
+                        ><input type="radio" name="category" value="Compras" />
+                        Compras</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          name="category"
+                          value="Educativo"
+                        />
+                        Educativo</label
+                      >
+                    </div>
+
+                    <!-- Contenedor para subcategorías, inicialmente oculto -->
+                    <div id="subcategory-container" class="hidden">
+                      <h3>Selecciona una subcategoría</h3>
+                      <div id="subcategory-options"></div>
+                    </div>
+
+                    <!-- Botones de acción en el modal -->
+                    <div class="modal-buttons">
+                      <button id="save-btn" class="save-btn">Guardar</button>
+                      <button id="cancel-btn" class="cancel-btn">
+                        Cancelar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-1 overflow-auto">
+        <header
+          class="bg-white shadow-sm p-4 flex justify-between items-center"
+        >
+          <div class="search-bar-container">
+            <i class="bx bx-search"></i>
+            <input type="text" class="search-bar" placeholder="Buscar" />
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <a href="notificaciones.html">
+              <span aria-label="Notificaciones"
+                ><i class="fas fa-bell"></i
+              ></span>
+            </a>
+            <span aria-label="Favoritos"><i class="fas fa-heart"></i></span>
+            <span aria-label="Ubicación"
+              ><i class="fas fa-map-marker-alt"></i
+            ></span>
+
+            <div class="ubicacion">
+              <button class="dropdown-toggle">
+                Santiago de Querétaro <i class="bx bx-chevron-down"></i>
+              </button>
+              <div class="language-dropdown">
+                <button
+                  class="state-button"
+                  data-lat="21.88234"
+                  data-lon="-102.28259"
+                >
+                  Aguascalientes
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="32.71865"
+                  data-lon="-115.45446"
+                >
+                  Baja California
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="24.14437"
+                  data-lon="-110.30050"
+                >
+                  Baja California Sur
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="19.84588"
+                  data-lon="-90.52346"
+                >
+                  Campeche
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="16.75692"
+                  data-lon="-93.12923"
+                >
+                  Chiapas
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="28.63299"
+                  data-lon="-106.06910"
+                >
+                  Chihuahua
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="25.42452"
+                  data-lon="-101.00071"
+                >
+                  Coahuila
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="19.24523"
+                  data-lon="-103.72501"
+                >
+                  Colima
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="24.02202"
+                  data-lon="-104.67020"
+                >
+                  Durango
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="21.01901"
+                  data-lon="-101.25735"
+                >
+                  Guanajuato
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="17.55150"
+                  data-lon="-99.50061"
+                >
+                  Guerrero
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="20.09110"
+                  data-lon="-98.76239"
+                >
+                  Hidalgo
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="20.67359"
+                  data-lon="-103.34380"
+                >
+                  Jalisco
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="19.43260"
+                  data-lon="-99.13320"
+                >
+                  Mexico
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="19.70073"
+                  data-lon="-101.18443"
+                >
+                  Michoacán
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="18.91861"
+                  data-lon="-99.23483"
+                >
+                  Morelos
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="21.50208"
+                  data-lon="-104.89412"
+                >
+                  Nayarit
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="25.68661"
+                  data-lon="-100.31611"
+                >
+                  Nuevo León
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="17.07318"
+                  data-lon="-96.72659"
+                >
+                  Oaxaca
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="19.04129"
+                  data-lon="-98.20620"
+                >
+                  Puebla
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="20.58879"
+                  data-lon="-100.38988"
+                >
+                  Querétaro
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="19.51393"
+                  data-lon="-88.27521"
+                >
+                  Quintana Roo
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="22.15658"
+                  data-lon="-100.98554"
+                >
+                  San Luis Potosí
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="24.80906"
+                  data-lon="-107.39400"
+                >
+                  Sinaloa
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="29.07297"
+                  data-lon="-110.95592"
+                >
+                  Sonora
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="18.14380"
+                  data-lon="-93.17654"
+                >
+                  Tabasco
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="23.74174"
+                  data-lon="-99.14523"
+                >
+                  Tamaulipas
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="19.31816"
+                  data-lon="-98.23750"
+                >
+                  Tlaxcala
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="19.17377"
+                  data-lon="-96.13422"
+                >
+                  Veracruz
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="20.96666"
+                  data-lon="-89.62301"
+                >
+                  Yucatán
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="22.77093"
+                  data-lon="-102.58325"
+                >
+                  Zacatecas
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="p-4 space-y-4">
+          <div class="nav-text">
+            Inicio &nbsp;&nbsp; > &nbsp;&nbsp; Descubrir
+          </div>
+
+          <!-- Mapa -->
+          <div class="bg-white rounded-lg shadow-md p-4">
+            <div id="map" class="map-container"></div>
+          </div>
+          <!-- Reseñas -->
+
+          <div class="lugar bg-white rounded-lg shadow-md p-4 relative">
+            <!-- Botón de tres puntos -->
+            <button class="dots-button" onclick="toggleMenu()">
+              <i class="fa-solid fa-ellipsis"></i>
+            </button>
+
+            <!-- Menú desplegable -->
+            <div id="menu-dropdown" class="menu-dropdown">
+              <ul>
+                <li>
+                  <button onclick="eliminarPublicacion()">
+                    Eliminar publicación
+                  </button>
+                </li>
+                <li>
+                  <button onclick="editarPublicacion()">
+                    Editar publicación
+                  </button>
+                </li>
+                <li>
+                  <button onclick="reportarPublicacion()">
+                    Reportar publicación
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Título y detalles de publicación -->
+            <h3 class="title font-semibold">Jardín de los Cerezos</h3>
+            <a href="#" class="publication-info text-gray-600">
+              <span class="publication-text"
+                >Publicado <span class="date">Noviembre 2023</span> por</span
+              >
+              @Aliciamendoza
+            </a>
+
+            <!-- Contenedor para la reseña y la imagen -->
+            <div class="review-container">
+              <!-- Texto de la reseña del visitante -->
+              <p class="text-sm text-gray-600 mb-2">
+                "Visitar el Jardín de los Cerezos en Kyoto fue una experiencia
+                que nunca olvidaré. Había escuchado sobre la belleza de los
+                cerezos en flor en Japón, pero estar allí en persona fue mucho
+                más impresionante de lo que imaginaba. El parque es un oasis de
+                calma y serenidad en medio de la ciudad, lleno de caminos de
+                piedra, puentes de madera y un lago central donde los cerezos se
+                reflejan como en un espejo. Caminando por sus senderos, me sentí
+                como si hubiera viajado al pasado, a un Japón antiguo donde todo
+                está en equilibrio con la naturaleza. La temporada de floración
+                era justo como había leído: una alfombra de pétalos rosa pálido
+                cubría el suelo, y los árboles parecían cobijar a los visitantes
+                bajo un cielo de flores. Me impresionó cómo cada rincón del
+                jardín parecía diseñado con una precisión increíble, desde la
+                disposición de los cerezos hasta los arces y glicinas que, según
+                me dijeron, florecen en otras estaciones, haciendo que el parque
+                sea hermoso durante todo el año. Lo que realmente hizo especial
+                la visita fue la atmósfera al anochecer. Justo cuando pensé que
+                no podía ser más hermoso, las luces se encendieron, iluminando
+                los árboles y reflejándose en el agua del lago."
+              </p>
+
+              <!-- Nueva imagen en lugar del mapa -->
+              <div class="image-container">
+                <img
+                  src="ruta/a/tu/imagen.jpg"
+                  alt="Imagen del Jardín de los Cerezos"
+                />
+              </div>
+            </div>
+
+            <!-- Sección de puntaje y estrellas -->
+            <div class="flex items-center mb-2">
+              <h3 class="text-puntaje">Puntaje:</h3>
+              <div class="star-container">
+                <i
+                  class="bx bxs-star star active cursor-pointer"
+                  data-value="1"
+                ></i>
+                <i
+                  class="bx bxs-star star active cursor-pointer"
+                  data-value="2"
+                ></i>
+                <i
+                  class="bx bxs-star star active cursor-pointer"
+                  data-value="3"
+                ></i>
+                <i
+                  class="bx bxs-star star active cursor-pointer"
+                  data-value="4"
+                ></i>
+                <i class="bx bx-star star cursor-pointer" data-value="5"></i>
+              </div>
+              <span class="text-puntocero ml-2 rating">4.0</span>
+            </div>
+
+            <!-- Barra divisoria -->
+            <hr class="divider" />
+
+            <!-- Botones de interacción y conteo de interacciones -->
+            <div
+              class="flex items-center justify-between text-sm text-gray-500"
+            >
+              <!-- Botones de Me gusta, Comentar, Compartir -->
+              <div class="flex items-center space-x-4">
+                <button
+                  id="like-button"
+                  class="custom-button button-item flex items-center"
+                  onclick="toggleLike()"
+                >
+                  <i class="fas fa-heart"></i>
+                  <span id="like-text" class="ml-2">Me gusta</span>
+                </button>
+
+                <button class="custom-button button-item flex items-center">
+                  <i class="fas fa-comments"></i>
+                  <span class="ml-2">Comentar</span>
+                </button>
+                <button class="custom-button button-item flex items-center">
+                  <i class="fas fa-share"></i>
+                  <span class="ml-2">Compartir</span>
+                </button>
+              </div>
+
+              <!-- Conteo de interacciones alineado a la derecha -->
+              <div class="interaction-counts flex items-center space-x-4">
+                <span class="interaction-item">+ 9999 Me gusta</span>
+                <span class="interaction-item">+ 99 Comentarios</span>
+                <span class="interaction-item">+ 99 Compartidos</span>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div
+        class="w-20 bg-white shadow-md flex flex-col items-center py-4 space-y-6 right-sidebar"
+      >
+        <nav class="space-y-6">
+          <h2 class="titulo text-sm font-semibold">Explora</h2>
+          <button
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+          >
+            <i class="bx bx-world"></i>
+          </button>
+          <button
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+          >
+            <i class="bx bx-basketball"></i>
+          </button>
+          <button
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+          >
+            <i class="bx bx-headphone"></i>
+          </button>
+          <button
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+          >
+            <i class="bx bx-store-alt"></i>
+          </button>
+          <button
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+          >
+            <i class="bx bxs-graduation"></i>
+          </button>
+          <button
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+          >
+            <i class="bx bxs-videos"></i>
+          </button>
+        </nav>
+      </div>
     </div>
-</body>
+
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+  </body>
 </html>

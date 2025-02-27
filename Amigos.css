@@ -1,0 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.sidebar {
+  position: fixed; /* Fija el sidebar en la pantalla */
+  top: 0; /* Sin espacio en la parte superior */
+  bottom: 0; /* Sin espacio en la parte inferior */
+  left: 0; /* Sin espacio en el lado izquierdo */
+  width: 250px; /* Ajusta el ancho del sidebar según sea necesario */
+  background-color: #f8f9fa; /* Color de fondo del sidebar */
+  overflow-y: auto; /* Permite desplazamiento si el contenido es más alto que la pantalla */
+  z-index: 1000; /* Asegura que el sidebar esté por encima de otros elementos */
+}
+
+/* Para ocultar cualquier margen o padding del cuerpo */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+/* Estilo opcional para el contenido principal para que no esté debajo del sidebar */
+.main-content {
+  margin-left: 250px; /* Ajusta este margen para que coincida con el ancho del sidebar */
+  padding: 20px;
+}
+
+a {
+  text-decoration: none; /* Elimina el subrayado en los enlaces */
+}
+
+a:hover {
+  text-decoration: none; /* Asegura que no haya subrayado en el hover */
+}
+
+img {
+  max-width: 100%; /* Hace que las imágenes sean responsivas */
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.rounded {
+  border-radius: 0.375rem; /* Bordes redondeados */
+}
+
+.rounded-full {
+  border-radius: 9999px; /* Bordes completamente redondeados */
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para crear profundidad */
+}
+
+.hover\:bg-gray-200:hover {
+  background-color: #edf2f7; /* Color de fondo en hover */
+}
+
+.transition-colors {
+  transition: background-color 0.3s; /* Transición suave para cambios de color */
+}
+
+.my-4 {
+  margin-top: 1rem; /* Margen vertical */
+  margin-bottom: 1rem; /* Margen vertical */
+}
+
+.p-4 {
+  padding: 1rem; /* Relleno */
+}
+
+.titulo-foraneo {
+  padding-left: 1rem;
+}
+
+.w-20 {
+  width: 5rem; /* Ancho para el sidebar derecho */
+}
+
+.h-12 {
+  height: 3rem; /* Altura para los botones de exploración */
+}
+
+.items-center {
+  align-items: center; /* Centra los elementos en el eje vertical */
+}
+
+.items-center2 {
+  align-items: center; /* Centra los elementos en el eje vertical */
+  padding-right: 5rem;
+}
+
+.justify-between {
+  justify-content: space-between; /* Espacia los elementos en el eje horizontal */
+}
+
+.text-gray-700 {
+  color: #4a5568; /* Color de texto */
+}
+
+.text-gray-600 {
+  color: #718096; /* Color de texto gris */
+}
+
+.text-gray-500 {
+  color: #a0aec0; /* Color de texto gris más claro */
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc; /* Color de fondo gris claro */
+}
+
+.bg-white {
+  background-color: #ffffff; /* Color de fondo blanco */
+}
+
+.hover\:bg-blue-600:hover {
+  background-color: #b1c4d7; /* Cambia a color en hover */
+}
+
+.bg-blue-500 {
+  background-color: #3182ce; /* Color de fondo azul */
+}
+
+.text-white {
+  color: #ffffff; /* Color de texto blanco */
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem; /* Espaciado vertical entre elementos */
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem; /* Espaciado vertical entre elementos */
+}
+
+.space-x-4 > * + * {
+  margin-left: 1.5rem; /* Espaciado horizontal entre elementos */
+}
+
+.ml-2 {
+  margin-left: 0.8rem; /* Margen izquierdo para separar íconos y texto */
+}
+
+.uppercase {
+  text-transform: uppercase; /* Transforma el texto a mayúsculas */
+}
+
+.text-sm {
+  font-size: 0.875rem; /* Tamaño de fuente pequeño */
+}
+
+.font-semibold {
+  font-weight: 600; /* Peso de fuente seminegrita */
+}
+
+.font-bold {
+  font-weight: 700; /* Peso de fuente negrita */
+}
+
+.icon {
+  width: 24px; /* Ajusta el tamaño según sea necesario */
+  height: 24px; /* Ajusta el tamaño según sea necesario */
+  display: inline-block;
+  border: none; /* Elimina el borde negro de los íconos */
+}
+
+/* Agregar más espacio entre los elementos del sidebar */
+nav a {
+  margin-bottom: 5px; /* Espacio entre los elementos de navegación */
+}
+
+.bordered-section h3 {
+  margin-left: 25px; /* Elimina el margen izquierdo */
+}
+
+/* Espacio adicional antes de la sección de transporte */
+h3 {
+  margin-top: 20px; /* Espacio superior para títulos de sección */
+}
+
+/* Estilo para el encabezado */
+h2 {
+  margin-top: 20px; /* Espacio superior para títulos de sección */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Estilos para los iconos del lado derecho */
+nav button {
+  width: 48px; /* Asegura que el ancho sea igual a la altura */
+  height: 48px; /* Altura del botón */
+  border-radius: 50%; /* Bordes completamente redondeados */
+  background-color: #3182ce; /* Color de fondo azul */
+  display: flex; /* Usar flexbox para centrar el contenido */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+nav button:hover {
+  background-color: #b1c4d7; /* Cambia a color en hover */
+}
+
+.add-more-btn {
+  width: 100%; /* Asegura que el botón ocupe el ancho completo */
+  padding: 10px; /* Relleno para un mejor aspecto */
+  background-color: #3182ce; /* Color de fondo azul */
+  color: #ffffff; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 0.375rem; /* Bordes redondeados */
+  text-align: center; /* Centra el texto */
+  font-weight: 600; /* Peso de fuente seminegrita */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.add-more-btn:hover {
+  background-color: #b1c4d7; /* Cambia a color en hover */
+}
+
+.add-more-btn span {
+  margin-left: 0; /* Sin margen izquierdo */
+}
+
+/* Asegúrate de que el contenedor del sidebar ocupe toda la altura de la pantalla */
+.left-sidebar {
+  height: 100vh; /* O 100% si es necesario */
+}
+
+/* Estilos generales para el sidebar */
+.left-sidebar {
+  overflow-y: auto; /* Habilita la barra de desplazamiento vertical */
+}
+
+.left-sidebar a {
+  padding: 0.5rem 1.5rem; /* Define un padding fijo */
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Transición para el hover */
+}
+
+.left-sidebar a:hover {
+  transform: scale(1.05); /* Amplía ligeramente sin cambiar el padding */
+  background-color: #e2e8f0; /* Cambia el color de fondo en hover */
+  border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+.left-sidebar .icon {
+  margin-top: 0.5rem; /* Ajusta este valor para bajar los iconos */
+}
+
+.bordered-section {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px; /* Esquinas redondeadas, opcional */
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 15px; /* Espaciado entre secciones */
+}
+
+/* Asegúrate de que el contenedor del main ocupe toda la altura de la pantalla */
+.flex-1 {
+  height: 100vh; /* O 100% si es necesario */
+}
+
+/* Reducir espacio arriba y abajo de "VIDA DE FORANEO" */
+.titulo-foraneo {
+  margin-top: 0.5rem; /* Ajusta según sea necesario */
+  margin-bottom: 0.5rem; /* Ajusta según sea necesario */
+}
+
+/* Centrar verticalmente la imagen y el texto */
+
+/* Espacio a la izquierda de la imagen */
+.profile-container img {
+  margin-left: 30px;
+  margin-right: -5px; /* Ajusta el valor según sea necesario */
+}
+/* Contenedor del buscador */
+.search-bar-container {
+  position: relative;
+  width: 400px; /* Ajusta el tamaño del buscador */
+}
+
+/* Estilo del input de búsqueda */
+.search-bar {
+  width: 100%;
+  padding: 12px 40px 12px 20px; /* Espacio extra para la lupa */
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px; /* Tamaño de fuente más grande */
+  outline: none;
+}
+
+/* Estilo del icono de la lupa */
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px; /* Ajusta según sea necesario */
+  transform: translateY(-50%);
+  font-size: 18px; /* Tamaño de la lupa */
+  color: #888; /* Color de la lupa */
+  pointer-events: none; /* Hace que el icono sea no clickeable */
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+.nav-text {
+  font-size: 0.75rem; /* Tamaño de letra más pequeño para toda la frase */
+  text-align: left; /* Alineación a la izquierda */
+  color: #888;
+}
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px; /* Espaciado interno */
+  background-color: #4299e1;
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+
+.custom-button i {
+  margin-right: 4px; /* Espacio entre el ícono y el texto */
+}
+
+.custom-button:hover {
+  background-color: #2b6cb0;
+}
+
+.custom-button:focus {
+  outline: none; /* Sin contorno al hacer foco */
+}
+
+.star {
+  color: gray; /* Color por defecto para las estrellas apagadas */
+  font-size: 24px; /* Tamaño de las estrellas */
+}
+
+.star.active {
+  color: gold; /* Color para las estrellas prendidas */
+}
+
+.my-4.border-t.border-gray-200 {
+  width: 80%; /* Ajusta al ancho deseado, o usa 100% para todo el ancho del sidebar */
+  margin: 12px auto; /* Centra la línea si no es de ancho completo */
+  border-color: #e2e8f0; /* Cambia el color a un gris claro */
+  border-top-width: 1px; /* Ajusta el grosor de la línea */
+}
+
+.my-4.border-t.border-gray-200 {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  margin: 16px 0; /* Separación arriba y abajo */
+  border-top: 1px solid #e2e8f0; /* Ajusta el color gris claro */
+  opacity: 1; /* Asegura que la línea sea visible */
+}
+
+.ubicacion {
+  display: inline-block; /* Para que el menú se ajuste al contenido */
+  position: relative; /* Para permitir que el menú se posicione absolutamente */
+}
+
+.language-dropdown {
+  display: none; /* Ocultar por defecto */
+  position: absolute; /* Permitir que se posicione en relación a su contenedor */
+  background-color: white; /* Fondo blanco para el menú */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  margin-top: 8px; /* Espaciado entre el contenedor y el menú */
+  border-radius: 4px; /* Bordes redondeados */
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+  max-height: 200px; /* Limitar la altura del menú */
+  overflow-y: auto; /* Permitir el desplazamiento vertical si el contenido es demasiado grande */
+  width: 100%; /* Asegura que el menú ocupe el ancho del contenedor */
+}
+
+.fa-map-marker-alt {
+  margin-right: -400px; /* Ajusta el valor según el espacio que necesites */
+}
+
+.bx-chevron-down {
+  margin-left: 1rem;
+}
+.language-dropdown button {
+  display: block; /* Asegura que cada enlace ocupe su propia línea */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  text-decoration: none; /* Sin subrayado */
+  color: #000; /* Color del texto */
+  width: 100%; /* Asegura que el botón ocupe el ancho del menú */
+  border: none; /* Sin bordes por defecto */
+  background: transparent; /* Fondo transparente para mantener el diseño */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.language-dropdown button:hover {
+  background-color: #f0f0f0; /* Color de fondo en hover */
+}
+
+.dropdown-toggle {
+  min-width: 200px; /* Ancho mínimo para el botón */
+  padding: 0.5rem;
+  padding-right: 2rem;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap; /* Evita que el texto se divida */
+  overflow: hidden; /* Oculta el texto que excede el botón */
+  text-overflow: ellipsis; /* Muestra '...' si el texto es demasiado largo */
+}
+
+.group:hover span,
+.group:hover i {
+  color: #007bff; /* Cambia el color del texto e icono al pasar el mouse */
+}
+
+/* =================================================================
+Amigos*/
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 76px); /* Resta 76px de la altura total */
+  box-sizing: border-box;
+}
+
+.nav-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.friend-container {
+  height: calc(100vh - 95px);
+  background-color: #000;
+  display: flex;
+  background-color: #f5f5f5; /* Color más suave */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-friend {
+  flex: 3;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.profile-header {
+  margin-bottom: 0.6rem;
+  height: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  align-items: center;
+  position: sticky;
+  background-color: white;
+  top: 0;
+  z-index: 10;
+}
+
+.profile-header h1 {
+  font-size: 1.4rem;
+}
+
+.show-friend {
+  height: calc(100% - 4rem);
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(12rem, 1fr)
+  ); /* Responsive grid */
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  margin: 0 0.5rem;
+}
+
+.profile-friend::-webkit-scrollbar {
+  display: none;
+}
+
+.friend-card {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  width: 100%; /* Asegura que el contenedor de la tarjeta sea flexible */
+  max-width: 12rem;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.add-friend span:hover,
+.cancel-request :hover {
+  transform: scale(1.05);
+}
+
+.img-card {
+  flex: 6;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Mejor opción para mantener el centro de la imagen */
+}
+
+.name-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #f8f8f8; /* Fondo suave */
+  border-top: 1px solid #ddd; /* Borde superior */
+  padding: 0.5rem;
+}
+
+.add-friend {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cancel-request {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  height: 3rem;
+  display: none;
+}
+
+.add-friend span,
+.cancel-request span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-friend :first-child {
+  background-color: #007bff;
+  width: 80%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.eliminar,
+.request {
+  background-color: #c6c6c6;
+  width: 80%;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  color: #000;
+  cursor: pointer;
+}
+
+/* General container */
+.notification-container {
+  position: absolute;
+  right: 4rem;
+  top: 1rem;
+  height: 30rem;
+  width: 20rem;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.notification-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header styles */
+.notification-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.notification-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.clear-all {
+  font-size: 1rem;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.clear-all:hover {
+  color: #0056b3;
+}
+
+/* Notification item styles */
+.notification-messages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notification-show {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 0.8rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s;
+  margin-top: 1rem;
+  z-index: 0;
+}
+
+.notification-show:hover {
+  background-color: #e8f0fe;
+  transform: translateY(-2px);
+}

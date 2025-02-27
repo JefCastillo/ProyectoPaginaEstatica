@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIDA DE FORANEO</title>
+    <link rel="stylesheet" href="Amigos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="flex h-screen bg-gray-100">
+      <!-- Left Sidebar -->
+      <div class="w-64 bg-white shadow-md overflow-y-auto h-full left-sidebar">
+        <div class="p-4">
+          <h1 class="text-2xl font-bold titulo-foraneo">
+            VIDA DE<br />
+            FORANEO
+          </h1>
+        </div>
+        <!-- Perfil centrado -->
+        <div class="profile-container flex items-center space-x-4">
+          <img
+            src=""
+            alt="Profile"
+            class="rounded-full"
+            width="40"
+            height="40"
+          />
+          <span>@FuriaCardenas</span>
+        </div>
+
+        <!-- Navegación principal -->
+        <div class="p-4">
+          <div class="my-4 border-t border-gray-200"></div>
+          <nav class="space-y-2">
+            <!-- Enlaces principales -->
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+            >
+              <i class="fas fa-home icon"></i>
+              <span class="ml-2">Inicio</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+            >
+              <i class="fas fa-pencil-alt icon"></i>
+              <span class="ml-2">Publicar</span>
+            </a>
+            <a
+              href="Mensajes.html"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+            >
+              <i class="fas fa-comments icon"></i>
+              <span class="ml-2">Mensajes</span>
+            </a>
+            <a
+              href="Amigos.html"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+            >
+              <i class="fas fa-user-friends icon"></i>
+              <span class="ml-2">Amigos</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+            >
+              <i class="fas fa-cog icon"></i>
+              <span class="ml-2">Configuración</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+            >
+              <i class="fas fa-question-circle icon"></i>
+              <span class="ml-2">Preguntas frecuentes</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded mt-4"
+            >
+              <i class="fas fa-sign-out-alt icon"></i>
+              <span class="ml-2">Cerrar sesión</span>
+            </a>
+
+            <!-- Sección de transporte -->
+            <div class="my-4 border-t border-gray-200"></div>
+            <div class="pt-2 bordered-section">
+              <h3
+                class="px-4 text-sm font-semibold text-gray-500 uppercase tracking-wider"
+              >
+                Transporte
+              </h3>
+              <a
+                href="#"
+                class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+              >
+                <i class="fas fa-bus icon"></i>
+                <span class="ml-2">Autobús</span>
+              </a>
+              <a
+                href="#"
+                class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+              >
+                <i class="fas fa-subway icon"></i>
+                <span class="ml-2">Tren</span>
+              </a>
+              <a
+                href="#"
+                class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+              >
+                <i class="fas fa-plane icon"></i>
+                <span class="ml-2">Avión</span>
+              </a>
+            </div>
+
+            <!-- Sección de comida -->
+            <div class="pt-2 bordered-section">
+              <h3
+                class="px-4 text-sm font-semibold text-gray-500 uppercase tracking-wider"
+              >
+                Comida
+              </h3>
+              <a
+                href="#"
+                class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+              >
+                <i class="fas fa-utensils icon"></i>
+                <span class="ml-2">Restaurantes</span>
+              </a>
+              <a
+                href="#"
+                class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+              >
+                <i class="fas fa-coffee icon"></i>
+                <span class="ml-2">Cafeterías</span>
+              </a>
+              <a
+                href="#"
+                class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-200 rounded"
+              >
+                <i class="fas fa-ice-cream icon"></i>
+                <span class="ml-2">Postres</span>
+              </a>
+            </div>
+
+            <button class="add-more-btn">
+              <span class="ml-2">Agregar más</span>
+            </button>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-1 overflow-auto">
+        <!-- Encabezado -->
+        <header
+          class="bg-white shadow-sm p-4 flex justify-between items-center"
+        >
+          <div class="search-bar-container">
+            <input type="text" class="search-bar" placeholder="Buscar" />
+          </div>
+          <div class="nav-header flex items-center space-x-4">
+            <span aria-label="Notificaciones" href="notificaciones.html">
+              ><i class="notificaciones fas fa-bell"></i
+            ></span>
+            <span aria-label="Favoritos"><i class="fas fa-heart"></i></span>
+            <span aria-label="Ubicación"
+              ><i class="fas fa-map-marker-alt"></i
+            ></span>
+            <!-- Selector de ubicación -->
+            <div class="ubicacion">
+              <button class="dropdown-toggle">
+                Santiago de Querétaro <i class="bx bx-chevron-down"></i>
+              </button>
+              <div class="language-dropdown">
+                <button
+                  class="state-button"
+                  data-lat="21.88234"
+                  data-lon="-102.28259"
+                >
+                  Aguascalientes
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="32.71865"
+                  data-lon="-115.45446"
+                >
+                  Baja California
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="24.14437"
+                  data-lon="-110.30050"
+                >
+                  Baja California Sur
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="19.84588"
+                  data-lon="-90.52346"
+                >
+                  Campeche
+                </button>
+                <button
+                  class="state-button"
+                  data-lat="16.75692"
+                  data-lon="-93.12923"
+                >
+                  Chiapas
+                </button>
+                <!-- Más estados aquí -->
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Contenido principal -->
+        <main class="main-container">
+          <!-- Contenedor del encabezado -->
+          <div class="header-container">
+            <div class="nav-text">
+              Inicio &nbsp;&nbsp; > &nbsp;&nbsp; Amigos
+            </div>
+          </div>
+
+          <!-- Contenedor de amigos -->
+          <div class="friend-container">
+            <div class="profile-friend">
+              <!-- Título de la sección de amigos -->
+              <div class="profile-header">
+                <h1>Amigos que quizás conozcas</h1>
+              </div>
+
+              <!-- Mostrar amigos -->
+              <div class="show-friend">
+                <!-- Tarjeta de amigo -->
+                <!-- Otra tarjeta de amigo -->
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+                <div class="card friend-card">
+                  <div class="img-card">
+                    <img
+                      src="https://img.freepik.com/premium-photo/greeting-concept-portrait-happy-freelancer-man-waving-hello-webcamera-using-laptop-video-calling_116547-44637.jpg"
+                      alt="Imagen de amigo"
+                    />
+                  </div>
+                  <div class="name-card">Pedro Pascal</div>
+                  <div class="add-friend">
+                    <span class="agregar">Agregar amigo</span>
+                    <span class="eliminar">Eliminar</span>
+                  </div>
+                  <div class="cancel-request">
+                    <div class="request">Cancelar Solicitud</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="Amigos.js"></script>
+  </body>
+</html>

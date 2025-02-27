@@ -1,0 +1,790 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.sidebar {
+  position: fixed; /* Fija el sidebar en la pantalla */
+  top: 0; /* Sin espacio en la parte superior */
+  bottom: 0; /* Sin espacio en la parte inferior */
+  left: 0; /* Sin espacio en el lado izquierdo */
+  width: 250px; /* Ajusta el ancho del sidebar según sea necesario */
+  background-color: #f8f9fa; /* Color de fondo del sidebar */
+  overflow-y: auto; /* Permite desplazamiento si el contenido es más alto que la pantalla */
+  z-index: 1000; /* Asegura que el sidebar esté por encima de otros elementos */
+}
+
+/* Para ocultar cualquier margen o padding del cuerpo */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat"
+}
+
+/* Estilo opcional para el contenido principal para que no esté debajo del sidebar */
+.main-content {
+  margin-left: 250px; /* Ajusta este margen para que coincida con el ancho del sidebar */
+  padding: 20px;
+}
+
+a {
+  text-decoration: none; /* Elimina el subrayado en los enlaces */
+}
+
+a:hover {
+  text-decoration: none; /* Asegura que no haya subrayado en el hover */
+}
+
+img {
+  max-width: 100%; /* Hace que las imágenes sean responsivas */
+}
+
+.flex {
+  display: flex;
+
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.rounded {
+  border-radius: 0.375rem; /* Bordes redondeados */
+}
+
+.rounded-full {
+  border-radius: 9999px; /* Bordes completamente redondeados */
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para crear profundidad */
+}
+
+.hover\:bg-gray-200:hover {
+  background-color: #edf2f7; /* Color de fondo en hover */
+}
+
+.transition-colors {
+  transition: background-color 0.3s; /* Transición suave para cambios de color */
+}
+
+.my-4 {
+  margin-top: 1rem; /* Margen vertical */
+  margin-bottom: 1rem; /* Margen vertical */
+}
+
+.p-4 {
+  padding: 1rem; /* Relleno */
+}
+
+.titulo-foraneo{
+  padding-left: 1rem;
+}
+
+.w-20 {
+  width: 5rem; /* Ancho para el sidebar derecho */
+}
+
+.h-12 {
+  height: 3rem; /* Altura para los botones de exploración */
+}
+
+.items-center {
+  align-items: center; /* Centra los elementos en el eje vertical */
+}
+
+.items-center2 {
+  align-items: center; /* Centra los elementos en el eje vertical */
+  padding-right: 5rem;
+}
+
+.justify-between {
+  justify-content: space-between; /* Espacia los elementos en el eje horizontal */
+}
+
+.text-gray-700 {
+  color: #4a5568; /* Color de texto */
+}
+
+.text-gray-600 {
+  color: #718096; /* Color de texto gris */
+}
+
+.text-gray-500 {
+  color: #a0aec0; /* Color de texto gris más claro */
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc; /* Color de fondo gris claro */
+}
+
+.bg-white {
+  background-color: #ffffff; /* Color de fondo blanco */
+}
+
+.hover\:bg-blue-600:hover {
+  background-color: #b1c4d7; /* Cambia a color en hover */
+}
+
+.bg-blue-500 {
+  background-color: #3182ce; /* Color de fondo azul */
+}
+
+.text-white {
+  color: #ffffff; /* Color de texto blanco */
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem; /* Espaciado vertical entre elementos */
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem; /* Espaciado vertical entre elementos */
+}
+
+.space-x-4 > * + * {
+  margin-left: 1.5rem; /* Espaciado horizontal entre elementos */
+}
+
+.ml-2 {
+  margin-left: 0.8rem; /* Margen izquierdo para separar íconos y texto */
+}
+
+.uppercase {
+  text-transform: uppercase; /* Transforma el texto a mayúsculas */
+}
+
+.text-sm {
+  font-size: 0.875rem; /* Tamaño de fuente pequeño */
+}
+
+.font-semibold {
+  font-weight: 600; /* Peso de fuente seminegrita */
+}
+
+.font-bold {
+  font-weight: 700; /* Peso de fuente negrita */
+}
+
+.icon {
+  width: 24px; /* Ajusta el tamaño según sea necesario */
+  height: 24px; /* Ajusta el tamaño según sea necesario */
+  display: inline-block;
+  border: none; /* Elimina el borde negro de los íconos */
+}
+
+/* Agregar más espacio entre los elementos del sidebar */
+nav a {
+  margin-bottom: 5px; /* Espacio entre los elementos de navegación */
+}
+
+.bordered-section h3 {
+  margin-left: 25px; /* Elimina el margen izquierdo */
+  
+}
+
+/* Espacio adicional antes de la sección de transporte */
+h3 {
+  margin-top: 20px; /* Espacio superior para títulos de sección */
+}
+
+/* Estilo para el encabezado */
+h2 {
+  margin-top: 20px; /* Espacio superior para títulos de sección */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Estilos para los iconos del lado derecho */
+nav button {
+  width: 48px; /* Asegura que el ancho sea igual a la altura */
+  height: 48px; /* Altura del botón */
+  border-radius: 50%; /* Bordes completamente redondeados */
+  background-color: #3182ce; /* Color de fondo azul */
+  display: flex; /* Usar flexbox para centrar el contenido */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+nav button:hover {
+  background-color: #b1c4d7; /* Cambia a color en hover */
+}
+
+.add-more-btn {
+  width: 100%; /* Asegura que el botón ocupe el ancho completo */
+  padding: 10px; /* Relleno para un mejor aspecto */
+  background-color: #3182ce; /* Color de fondo azul */
+  color: #ffffff; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 0.375rem; /* Bordes redondeados */
+  text-align: center; /* Centra el texto */
+  font-weight: 600; /* Peso de fuente seminegrita */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+.add-more-btn i {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.add-more-btn:hover {
+  background-color: #b1c4d7; /* Cambia a color en hover */
+}
+
+.add-more-btn span {
+  margin-left: 0; /* Sin margen izquierdo */
+}
+
+.right-sidebar {
+  padding: 16px; /* Espaciado interno */
+  display: flex; /* Usar flexbox para alinear los elementos */
+  flex-direction: column; /* Dirección de flexión vertical */
+  align-items: center; /* Centra elementos en el sidebar */
+}
+
+.right-sidebar .titulo {
+  color: #333; /* Ajustar el color del ícono si es necesario */
+  margin-bottom: 2rem; /* Espacio inferior para el título */
+}
+
+/* Estilos para los botones en el sidebar derecho */
+.right-sidebar button {
+  width: 64px; /* Aumentar ancho del botón */
+  height: 64px; /* Aumentar altura del botón */
+  border-radius: 50%; /* Bordes completamente redondeados */
+  background-color: #F3F4F6; /* Color de fondo azul */
+  border: none; /* Quita cualquier borde */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+  margin-bottom: 30px; /* Espacio inferior entre botones */
+}
+
+/* Estilos para los iconos dentro de los botones */
+.right-sidebar button i {
+  font-size: 32px; /* Aumentar el tamaño del ícono */
+  color: #333; /* Ajustar el color del ícono si es necesario */
+}
+
+.right-sidebar button:hover {
+  background-color: #b1c4d7; /* Color de fondo azul oscuro en hover */
+}
+
+
+/* Asegúrate de que el contenedor del sidebar ocupe toda la altura de la pantalla */
+.left-sidebar {
+  height: 100vh; /* O 100% si es necesario */
+}
+
+/* Estilos generales para el sidebar */
+.left-sidebar {
+  overflow-y: auto; /* Habilita la barra de desplazamiento vertical */
+}
+
+.left-sidebar a {
+  padding: 0.5rem 1.5rem; /* Define un padding fijo */
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Transición para el hover */
+}
+
+.left-sidebar a:hover {
+  transform: scale(1.05); /* Amplía ligeramente sin cambiar el padding */
+  background-color: #e2e8f0; /* Cambia el color de fondo en hover */
+  border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+.left-sidebar .icon {
+  margin-top: 0.5rem; /* Ajusta este valor para bajar los iconos */
+}
+
+
+/* Asegúrate de que el contenedor del main ocupe toda la altura de la pantalla */
+.flex-1 {
+  height: 100vh; /* O 100% si es necesario */
+  overflow-y: scroll; /* Habilita el desplazamiento vertical */
+}
+
+/* Ocultar la barra de desplazamiento */
+.flex-1::-webkit-scrollbar {
+  display: none; /* Ocultar en navegadores basados en WebKit */
+}
+
+.flex-1 {
+  -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+  scrollbar-width: none;  /* Para Firefox */
+}
+
+/* Reducir espacio arriba y abajo de "VIDA DE FORANEO" */
+.titulo-foraneo {
+  margin-top: 0.5rem; /* Ajusta según sea necesario */
+  margin-bottom: 0.5rem; /* Ajusta según sea necesario */
+}
+
+/* Centrar verticalmente la imagen y el texto */
+
+/* Espacio a la izquierda de la imagen */
+.profile-container img {
+  margin-left: 30px;
+  margin-right: -5px; /* Ajusta el valor según sea necesario */
+}
+/* Contenedor del buscador */
+.search-bar-container {
+  position: relative;
+  width: 400px; /* Ajusta el tamaño del buscador */
+}
+
+/* Estilo del input de búsqueda */
+.search-bar {
+  width: 100%;
+  padding: 12px 40px 12px 40px; /* Padding para evitar superposición con la lupa */
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px; /* Tamaño de fuente más grande */
+  outline: none;
+}
+
+/* Estilo para el ícono de búsqueda */
+.search-bar-container i {
+  position: absolute;
+  left: 15px; /* Ajustar distancia del ícono al borde izquierdo */
+  top: 50%; /* Centrar verticalmente */
+  transform: translateY(-50%); /* Ajusta para centrar exactamente */
+  pointer-events: none; /* Ignorar eventos de clic en el ícono */
+  font-size: 18px; /* Tamaño del ícono */
+  color: #888; /* Color del ícono */
+}
+
+
+
+
+#map {
+	height: 500px;
+	width: 100%;
+}
+
+.nav-text {
+  font-size: 0.75rem; /* Tamaño de letra más pequeño para toda la frase */
+  text-align: left; /* Alineación a la izquierda */
+  color: #888;
+}
+
+
+.my-4.border-t.border-gray-200 {
+  width: 80%; /* Ajusta al ancho deseado, o usa 100% para todo el ancho del sidebar */
+  margin: 12px auto; /* Centra la línea si no es de ancho completo */
+  border-color: #e2e8f0; /* Cambia el color a un gris claro */
+  border-top-width: 1px; /* Ajusta el grosor de la línea */
+}
+
+.my-4.border-t.border-gray-200 {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  margin: 16px 0; /* Separación arriba y abajo */
+  border-top: 1px solid #e2e8f0; /* Ajusta el color gris claro */
+  opacity: 1; /* Asegura que la línea sea visible */
+}
+
+.ubicacion {
+  display: inline-block; /* Para que el menú se ajuste al contenido */
+  position: relative; /* Para permitir que el menú se posicione absolutamente */
+}
+
+.language-dropdown {
+  display: none; /* Ocultar por defecto */
+  position: absolute; /* Permitir que se posicione en relación a su contenedor */
+  background-color: white; /* Fondo blanco para el menú */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  margin-top: 8px; /* Espaciado entre el contenedor y el menú */
+  border-radius: 4px; /* Bordes redondeados */
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+  max-height: 200px; /* Limitar la altura del menú */
+  overflow-y: auto; /* Permitir el desplazamiento vertical si el contenido es demasiado grande */
+  width: 100%; /* Asegura que el menú ocupe el ancho del contenedor */
+}
+
+.fa-map-marker-alt {
+  margin-right: -400px; /* Ajusta el valor según el espacio que necesites */
+}
+
+
+.bx-chevron-down{
+  margin-left: 1rem;
+}
+.language-dropdown button {
+  display: block; /* Asegura que cada enlace ocupe su propia línea */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  text-decoration: none; /* Sin subrayado */
+  color: #000; /* Color del texto */
+  width: 100%; /* Asegura que el botón ocupe el ancho del menú */
+  border: none; /* Sin bordes por defecto */
+  background: transparent; /* Fondo transparente para mantener el diseño */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.language-dropdown button:hover {
+  background-color: #f0f0f0; /* Color de fondo en hover */
+}
+
+.dropdown-toggle {
+  min-width: 200px; /* Ancho mínimo para el botón */
+  padding: 0.5rem;
+  padding-right: 2rem;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap; /* Evita que el texto se divida */
+  overflow: hidden; /* Oculta el texto que excede el botón */
+  text-overflow: ellipsis; /* Muestra '...' si el texto es demasiado largo */
+}
+
+
+.group:hover span, .group:hover i {
+  color: #007BFF; /* Cambia el color del texto e icono al pasar el mouse */
+}
+
+.fa-bell{
+  text-decoration: none;
+  color: #000;
+}
+/* Estilo para el modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Estilo para los campos de entrada */
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilos para los botones "Guardar" y "Cancelar" */
+.save-btn, .cancel-btn {
+  padding: 8px 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #3182ce;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Estilo para el contenedor de valores adicionales */
+#additional-menu {
+  padding: 10px; /* Espaciado interno */
+  border-top: 1px solid #e2e8f0; /* Borde superior para separar el menú adicional */
+}
+
+/* Estilo para cada elemento de valor dentro del menú adicional */
+.value-item {
+  padding: 8px 0; /* Espaciado vertical entre elementos */
+  color: #4a5568; /* Color de texto */
+}
+
+/* Estilo para el título de cada bloque */
+.block-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+/* Línea divisoria debajo del título */
+.divider {
+  border-top: 1px solid #e2e8f0; /* Color gris claro */
+  margin-bottom: 0.5rem;
+}
+
+/* Clase oculta para esconder elementos */
+.hidden {
+  display: none;
+}
+/* Estilos para alinear los botones en la misma línea */
+.modal-buttons {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.modal-buttons .save-btn,
+.modal-buttons .cancel-btn {
+  width: 50%;
+  padding: 8px 0; /* Ajusta el padding para que el botón ocupe todo el ancho */
+}
+
+/* Estilo para los botones de categoría y subcategoría */
+.category-options label,
+#subcategory-options label {
+    display: block;
+    background-color: #f3f4f6; /* Fondo similar al botón de "Agregar atajo" */
+    border: 1px solid #d1d5db; /* Borde ligero */
+    padding: 10px;
+    border-radius: 4px; /* Esquinas ligeramente redondeadas */
+    margin: 5px 0;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambia el color al pasar el cursor */
+.category-options label:hover,
+#subcategory-options label:hover {
+    background-color: #e5e7eb; /* Fondo ligeramente más oscuro al pasar */
+}
+
+/* Estilo para los inputs dentro de las etiquetas */
+.category-options input[type="radio"],
+#subcategory-options input[type="checkbox"] {
+    display: none; /* Oculta los inputs */
+}
+
+/* Estilo para botón de categoría o subcategoría seleccionado */
+.category-options label.selected,
+#subcategory-options label.selected {
+    background-color: #d1d5db; /* Fondo seleccionado */
+    border-color: #9ca3af; /* Borde más oscuro al seleccionar */
+}
+
+/* Estilo para las categorías y subcategorías guardadas */
+.category-options label.saved {
+  background-color: #007bff; /* Azul */
+  color: white;
+  border-color: #007bff;
+}
+/* Contenedor principal .lugar */
+.lugar {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Botón de tres puntos .dots-button */
+.dots-button {
+  position: absolute;
+  top: 23px;
+  right: 35px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: #000000;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 1.5rem;
+  z-index: 1000;
+}
+.dots-button:hover {
+  background-color: #E5E7EB;
+}
+
+/* Menú desplegable .menu-dropdown */
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  z-index: 1000;
+}
+.menu-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-dropdown li {
+  border-bottom: 1px solid #555;
+}
+.menu-dropdown li button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.menu-dropdown li button:hover {
+  background-color: #444;
+}
+.menu-dropdown li:last-child {
+  border-bottom: none;
+}
+
+/* Título de la publicación .title */
+.title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  display: inline;
+  margin-right: 8px;
+}
+
+/* Información de la publicación .publication-info */
+.publication-info {
+  font-size: 0.5rem;
+  color: #4a5568;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.publication-info:hover {
+  color: #4299e1;
+  text-decoration: none;
+}
+.date {
+  font-weight: normal;
+}
+
+/* Texto de la reseña del visitante */
+.text-sm.text-gray-600.mb-2 {
+  width: 60%;
+  text-align: justify;
+  margin-bottom: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  width: 35%;
+  background-color: #e2e8f0;
+  border-radius: 8px;
+  display: inline-block;
+  vertical-align: top;
+  height: 215px;
+  margin-left: 2.6rem;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajuste para cubrir el contenedor sin distorsión */
+  border-radius: 8px;
+}
+
+/* Sección de puntaje y estrellas */
+.text-puntaje {
+  font-size: 1rem;
+  color: #000;
+  margin-right: 10px;
+}
+.star-container {
+  display: flex;
+  align-items: center;
+}
+.text-puntocero {
+  color: #718096;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  margin-left: 5px;
+}
+.star {
+  color: gray;
+  font-size: 24px;
+  margin-right: 4px;
+}
+.star.active {
+  color: gold;
+}
+
+/* Barra divisoria .divider */
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 20px 0;
+  margin-top: 6px;
+}
+
+/* Botones de interacción .custom-button */
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.custom-button:hover {
+  background-color: #2b6cb0;
+}
+.custom-button i {
+  margin-right: 2px;
+}
+
+/* Conteo de interacciones .interaction-counts */
+.interaction-counts {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-size: 0.75rem;
+}
+.interaction-counts .interaction-item {
+  width: 120px;
+  text-align: center;
+  color: #4a5568;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  margin-left: 20px;
+}
+.interaction-counts .interaction-item:hover {
+  color: #4299e1;
+}
+
+.interaction-counts .interaction-item:hover::after {
+  content: '';
+  display: block;
+  width: 100%; /* Ancho de subrayado */
+  height: 2px;
+  background-color: #4299e1;
+  position: absolute;
+  bottom: -4px; /* Posición de la línea justo debajo del texto */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.2s ease; /* Transición suave de la línea */
+}
